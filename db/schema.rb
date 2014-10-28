@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028201342) do
+ActiveRecord::Schema.define(version: 20141028211437) do
+
+  create_table "spots", force: true do |t|
+    t.string   "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spots", ["user_id"], name: "index_spots_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",           null: false
