@@ -1,6 +1,6 @@
-<%= form_for :spot do |form|%>
+<%= form_for @spot do |form|%>
 	<%= form.text_field :body, placeholder: 'Spot Something' %>
 	<%= form.submit 'Spot Me' %>
 <%end%>
 
-<%= render @spots%>
+<%= render @spots %>

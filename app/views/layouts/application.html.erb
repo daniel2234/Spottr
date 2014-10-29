@@ -10,7 +10,7 @@
 	
 	<div>
 		<% if signed_in? %>
-			<%= link_to current_user.email %>
+			<%= link_to current_user.email, dashboard_path %>
 	  		<%= link_to "Sign out", session_path, method: :delete %>
 		<% else %>
 	  		<%= link_to "Sign in", new_session_path %>
