@@ -6,8 +6,12 @@ class SpotsController < ApplicationController
 
 	def create
 		spot = current_user.spots.build(spot_parameters)
-		spot.save
-		redirect_to dashboard_path
+		if spot.save
+			redirect_to dashboard_path
+		else
+			flash.alert = "Could not spot."
+			redirect_to dashboard_path
+		end
 	end
 
 
