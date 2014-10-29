@@ -1,11 +1,11 @@
-<%= form_for @text_spot do |form|%>
+<%= form_for @dashboard.new_text_spot do |form|%>
 	<%= form.text_field :body, placeholder: 'Spot Something' %>
 	<%= form.submit 'Spot Me' %>
 <%end%>
 
-<%= form_for @photo_spot do |form|%>
+<%= form_for @dashboard.new_photo_spot do |form|%>
 	<%= form.file_field :image %>
 	<%= form.submit 'Spot Me' %>
 <%end%>
 
-<%= render @spots %>
+<%= render @dashboard.timeline %>
