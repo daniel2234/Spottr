@@ -1,6 +1,7 @@
 class DashboardsController < ApplicationController
 	def show
-		@spot = Spot.new
+		@text_spot = TextSpot.new
+		@photo_spot = PhotoSpot.new
 		@spots = current_user.spots
 	end
 end
