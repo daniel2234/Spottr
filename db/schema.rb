@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028211437) do
+ActiveRecord::Schema.define(version: 20141028215243) do
 
   create_table "spots", force: true do |t|
     t.string   "body"
