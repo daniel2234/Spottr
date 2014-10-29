@@ -1,3 +1,6 @@
 <%= div_for spot do %>
+	<%= link_to spot.user.email, spot.user%>
+	spotted
 	<%= spot.body %>
+	<%= link_to time_ago_in_words(spot.created_at), spot%>
 <% end %>
