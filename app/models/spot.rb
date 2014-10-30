@@ -3,9 +3,7 @@ class Spot < ActiveRecord::Base
   default_scope {order("created_at DESC")}
   belongs_to :content, polymorphic: true
 
-  def self.search term
-  	text_spots = TextSpot.where("body LIKE ?", "%#{term}%") 
-  	where(content_type: 'TextSpot', content_id: text_spots )
+  def self.text_spots
+  	where(content_type: 'TextSpot')
   end
-  
 end
