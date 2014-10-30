@@ -6,4 +6,10 @@ class Spot < ActiveRecord::Base
   def self.text_spots
   	where(content_type: 'TextSpot')
   end
+
+  searchable do
+  	text :content do
+  		content.index
+  	end  	
+  end
 end

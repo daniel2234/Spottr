@@ -6,14 +6,8 @@ class Search
 	end
 
 	def spots
-		Spot.text_spots.where(content_id: text_spots)
-	end
-
-	def text_spots
-		TextSpot.where("body LIKE ?", search_term)
-	end
-
-	def search_term
-		"%#{term}%"
+		Spot.search do 
+			fulltext term
+		end.results
 	end
 end
