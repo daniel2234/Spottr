@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :spots, only: [:show]
   resources :text_spots, only: [:create]
   resources :photo_spots, only: [:create]
+  resources :hashtags, only: [:show]
 
 end

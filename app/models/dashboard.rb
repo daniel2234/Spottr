@@ -8,7 +8,7 @@ class Dashboard
 	end
 
 	def new_photo_spot
-		TextSpot.new
+		PhotoSpot.new
 	end
 
 	def timeline

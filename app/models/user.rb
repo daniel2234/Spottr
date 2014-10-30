@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
   	followed_users << user
   end
 
+  def can_follow? user
+    self != user
+  end
+
   def unfollow user
   	followed_users.delete(user)
   end
